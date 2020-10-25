@@ -29,6 +29,7 @@ for j in 1:Ay
     j_edges = sum(A[j , :])
     cluster_j = connected_j/(j_edges*(j_edges-1)+1e-6)# なので、ここでは分子に掛けるはずの2を掛けない
     push!(Cs, cluster_j)
+# ===以下をコメントアウトして実行するとノードごとのエッジとクラスター係数が表示される===
     # println("node : ", j)
     # println("edges ====> ", j_edges)
     # println("cc =======> ", cluster_j)
