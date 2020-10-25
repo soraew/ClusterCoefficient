@@ -13,6 +13,6 @@ Cluster value for graph = 0.371
 
 (ノードの色が濃いほどクラスター係数が大きいように表示される)
 
-![graph](https://github.com/soraew/ClusterCoefficient/blob/main/graph2.png)
+![graph](https://github.com/soraew/ClusterCoefficient/blob/main/graph.png)
 
 
