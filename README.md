@@ -2,9 +2,10 @@
 無向グラフのクラスター係数を求めるアルゴリズムを、julia で実装したもの.
 cluster_coefficient.jlとgraphs.jlを同じフォルダ内に入れてcluster_coefficient.jlを実行すると、
 
-```
-Cluster value for each node = \[0.4, 0.333, 0.381, 0.1, 0.333, 0.667, 0.333, 0.333, 0.5, 0.33 3]
-Cluster value for graph = 0.371 
+```shell
+❯ julia cluster_coefficient.jl
+Cluster value for each node = [0.4, 0.333, 0.381, 0.1, 0.333, 0.667, 0.333, 0.333, 0.5, 0.333]
+Cluster value for graph = 0.371
 ```
 
 のようにしてそれぞれのノードのクラスター係数と、グラフ全体のクラスター係数が出力され、以下のようなグラフが
