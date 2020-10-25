@@ -1,5 +1,5 @@
 # ClusterCoefficient
-無向グラフのクラスター係数を求めるアルゴリズムを、julia で実装したもの.
+無向グラフのクラスター係数を求めるアルゴリズムを、julia で実装したもの
 cluster_coefficient.jlとgraphs.jlを同じフォルダ内に入れてcluster_coefficient.jlを実行すると、
 
 ```shell
@@ -9,7 +9,7 @@ Cluster value for graph = 0.493
 ```
 
 のようにしてそれぞれのノードのクラスター係数と、グラフ全体のクラスター係数が出力され、以下のようなグラフが
-"graph.png"に保存される.
+"graph.png"に保存される
 
 (ノードの色が濃いほどクラスター係数が大きいように表示される)
 
