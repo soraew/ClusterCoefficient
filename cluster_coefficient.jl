@@ -8,10 +8,10 @@ include("graphs.jl")
 
 
 
-# # A = undirected_graph(rand(6:20))
+A = undirected_graph(rand(6:20))
 # # A = [0 1 1 1 1; 1 0 1 1 1; 1 1 0 1 1; 1 1 1 0 1; 1 1 1 1 0] #=> CC : 1.0
 # # A = [0 0 0 0;0 0 0 1;0 0 0 1;0 1 1 0] #=> CC : 0.0
-A = from_edges([[2],[3, 4, 5],[2],[2, 5, 6],[2, 4],[4]],6)
+# A = from_edges([[2],[3, 4, 5],[2],[2, 5, 6],[2, 4],[4]],6)
 
 Ax = size(A)[1] 
 Ay = size(A)[2]
