@@ -39,8 +39,7 @@ end
 
 println("Cluster value for each node = ",Cs)
 println("Cluster value for graph = ", round(mean(Cs), digits=3))
-
-
+println("ccccc", mean(Cs))
 
 gr();
 graphplot(A,
