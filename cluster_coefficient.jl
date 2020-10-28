@@ -31,15 +31,15 @@ for j in 1:Ay
     cluster_j = connected_j/(j_edges*(j_edges-1)+1e-6)# なので、ここでは分子に掛けるはずの2を掛けない
     push!(Cs, cluster_j)
 # ===以下を実行するとノードごとのエッジ数,クラスター係数が表示される===
-    println("node : ", j)
-    println("edges ====> ", j_edges)
-    println("cluster_coefficient ==> ", round(cluster_j, digits=3))
-    println()
+    # println("node : ", j)
+    # println("edges ====> ", j_edges)
+    # println("cluster_coefficient ==> ", round(cluster_j, digits=3))
+    # println()
 end
 
 println("Cluster value for each node = ",Cs)
 println("Cluster value for graph = ", round(mean(Cs), digits=3))
-println("ccccc", mean(Cs))
+
 
 gr();
 graphplot(A,
@@ -48,5 +48,6 @@ graphplot(A,
     markersize=0.2,
     nodeshape=:circle,
 #     arrow=:arrow, 
+    curves=false,
     )
 savefig("graph.png")
