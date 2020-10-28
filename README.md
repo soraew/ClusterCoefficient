@@ -12,7 +12,7 @@ Cluster value for graph = 0.493
 のようにしてそれぞれのノードのクラスター係数と、グラフ全体のクラスター係数が出力され、以下のようなグラフが
 "graph.png"に保存される
 
-(ノードの色が濃いほどクラスター係数が大きいように表示される)
+(ノードの色が明るいほどクラスター係数が大きいように表示される)
 
 ![graph](https://github.com/soraew/ClusterCoefficient/blob/main/graph.png)
 
