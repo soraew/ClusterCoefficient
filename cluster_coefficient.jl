@@ -1,5 +1,5 @@
 using ColorSchemes
-show_image(M) = get.([ColorSchemes.bamako], M./(maximum(M)+1e-6))
+show_image(M) = get.([ColorSchemes.bamako], (M.+0.2)/(maximum(M)+1e-6))
 using Random
 using Statistics
 using GraphRecipes
@@ -8,9 +8,17 @@ include("graphs.jl")
 
 
 
-A = undirected_graph(rand(6:20))
-# A = [0 1 1 1 1; 1 0 1 1 1; 1 1 0 1 1; 1 1 1 0 1; 1 1 1 1 0] #=> CC : 1.0
-# A = [0 0 0 0;0 0 0 1;0 0 0 1;0 1 1 0] #=> CC : 0.0
+# # A = undirected_graph(rand(6:20))
+# # A = [0 1 1 1 1; 1 0 1 1 1; 1 1 0 1 1; 1 1 1 0 1; 1 1 1 1 0] #=> CC : 1.0
+# # A = [0 0 0 0;0 0 0 1;0 0 0 1;0 1 1 0] #=> CC : 0.0
+# A = zeros(6, 6)
+# A[1, 2] = 1; A[2, 1] = 1
+# A[2, 3] = 1; A[3, 2] = 1
+# A[2, 4] = 1; A[4, 2] = 1
+# A[2, 5] = 1; A[5, 2] = 1
+# A[4, 5] = 1; A[5, 4] = 1
+# A[4, 6] = 1; A[6, 4] = 1
+A = from_edges([[2],[3, 4, 5],[2],[2, 5, 6],[2, 4],[4]],6)
 
 Ax = size(A)[1] 
 Ay = size(A)[2]
@@ -30,9 +38,11 @@ for j in 1:Ay
     cluster_j = connected_j/(j_edges*(j_edges-1)+1e-6)# なので、ここでは分子に掛けるはずの2を掛けない
     push!(Cs, cluster_j)
 # ===以下をコメントアウトして実行するとノードごとのエッジ数が表示される===
-    # println("node : ", j)
-    # println("edges ====> ", j_edges)
-    # println()
+    println("node : ", j)
+    println("edges ====> ", j_edges)
+    println("connected_j=>", connected_j)
+    println("cluster_coefficient", round(cluster_j, digits=3))
+    println()
 end
 
 println("Cluster value for each node = ",Cs)
