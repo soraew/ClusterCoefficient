@@ -47,7 +47,6 @@ graphplot(A,
     marker_color=show_image(Cs),
     markersize=0.2,
     nodeshape=:circle,
-#     arrow=:arrow, 
-    curves=false,
+    # curves=false,
     )
 savefig("graph.png")
